@@ -11,6 +11,7 @@
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .day-details {
@@ -31,6 +32,16 @@
   text-align: right;
 }
 
+.vertical-line {
+  border-left: 1px solid rgb(190, 188, 188);
+  position: absolute;
+  height: 100%;
+  margin-left: 105px;
+  margin-top: 30px;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
 .day-header {
   display: inline-block;
   margin-left: 25px;
@@ -39,12 +50,25 @@
 
 .day-date {
   color: white;
-  background-color: gray;
+  background-color: rgb(170, 169, 169);
   padding: 8px;
   border-radius: 10px;
+}
+
+.first-day {
+  background-color: rgb(2, 184, 72);
 }
 
 .event {
   margin-top: 10px;
   margin-left: 5px;
+}
+
+.horizontal-line {
+  border-top: 1px solid rgb(190, 188, 188);
+  width: 100%;
+  margin-left: 103px;
+  margin-top: 20px;
+  margin-bottom: -30px;
+  z-index: -2;
 }

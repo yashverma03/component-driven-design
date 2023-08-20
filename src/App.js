@@ -3,9 +3,10 @@ import Calendar from './components/Calendar';
 
 const App = () => {
   return (
-    <div>
+    <>
+      {/* Render a single component called Calendar.jsx */}
       <Calendar />
-    </div>
+    </>
   );
 };
 
