@@ -1,7 +1,7 @@
 import React from 'react';
 import './Event.css';
 
-const Event = ({ events }) => {
+const Event = ({ events, isFirstEventOfDay }) => {
   return (
     <div className='event'>
       {events.map((event, index) => (
@@ -9,16 +9,16 @@ const Event = ({ events }) => {
           <div className='event-details'>
             <p className='event-time'>{event.time}</p>
             <img className='event-task-icon' src={event.taskIcon} alt='task' />
-            <p className='event-task-name'>{event.taskName}</p>
+            <p className={`event-task-name ${isFirstEventOfDay && index === 0 ? 'first-event' : ''}`}>{event.taskName}</p>
           </div>
-          
+
           <div className='event-user'>
             <img className='event-user-photo' src={event.userPhoto} alt='user' />
             <p className='event-user-name'>{event.userName}</p>
           </div>
         </div>
       ))}
-    </div>
+    </div >
   );
 };
 

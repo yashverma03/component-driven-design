@@ -2,7 +2,7 @@ import React from 'react';
 import Event from './Event';
 import './Day.css';
 
-const Day = ({ date, day, month, events }) => {
+const Day = ({ date, day, month, events, isFirstDay }) => {
   return (
     <div className='day-parent'>
       <div className="day">
@@ -12,12 +12,12 @@ const Day = ({ date, day, month, events }) => {
         </div>
 
         <div className="day-header">
-          <h2 className="day-date">{date}</h2>
+          <h2 className={`day-date ${isFirstDay ? 'first-day' : ''}`}>{date}</h2>
         </div>
       </div>
 
       <div className='event'>
-        <Event events={events} /> {/* Pass the events as props to Event component */}
+        <Event events={events} isFirstEventOfDay={isFirstDay} /> {/* Pass the events as props to Event component */}
       </div>
     </div>
   );
