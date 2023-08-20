@@ -11,6 +11,7 @@
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .day-details {
@@ -29,6 +30,15 @@
   margin: 0;
   color: grey;
   text-align: right;
+}
+
+.vertical-line {
+  border-left: 1px solid grey;
+  height: 100%;
+  position: absolute;
+  margin-left: 103px;
+  z-index: -1;
+  transform: translateX(-50%);
 }
 
 .day-header {

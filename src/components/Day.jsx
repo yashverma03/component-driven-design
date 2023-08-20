@@ -5,6 +5,9 @@ import './Day.css';
 const Day = ({ date, day, month, events, isFirstDay }) => {
   return (
     <div className='day-parent'>
+      {/* vertical line */}
+      <div className="vertical-line" />
+
       <div className="day">
         <div className="day-details">
           <p className="day-day">{day}</p>
