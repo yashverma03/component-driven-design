@@ -6,7 +6,6 @@
 
 .event-item {
   display: inline-flex;
-  padding: 0;
   flex-direction: column;
   margin-top: -20px;
 }
@@ -24,11 +23,14 @@
 .event-task-icon {
   width: 30px;
   border-radius: 50%;
+  margin-left: 3px;
 }
 
 .event-task-name {
   font-weight: 500;
   font-size: 16px;
+  position: absolute;
+  margin-left: 120px;
 }
 
 .first-event {
@@ -40,7 +42,12 @@
   align-items: center;
   gap: 5px;
   margin-left: 120px;
-  margin-top: -20px;
+  margin-top: -15px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .event-user-photo {
