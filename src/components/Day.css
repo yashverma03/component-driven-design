@@ -1,0 +1,50 @@
+.day-parent {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.day-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.day-day {
+  margin: 5px 0;
+  font-weight: 800;
+  font-family: 'Arial', Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.day-month {
+  margin: 0;
+  color: grey;
+  text-align: right;
+}
+
+.day-header {
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 100%;
+}
+
+.day-date {
+  color: white;
+  background-color: gray;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.event {
+  margin-top: 10px;
+  margin-left: 5px;
+}

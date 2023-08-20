@@ -1,0 +1,50 @@
+.event {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-item {
+  display: inline-flex;
+  padding: 0;
+  flex-direction: column;  
+  margin-top: -20px;
+}
+
+.event-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.event-time {
+  color: grey;
+}
+
+.event-task-icon {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.event-task-name {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.event-user {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 120px;
+  margin-top: -20px;
+}
+
+.event-user-photo {
+  width: 20px;
+  border-radius: 50%;
+}
+
+.event-user-name {
+  color: gray;
+  font-size: 14px;
+}
