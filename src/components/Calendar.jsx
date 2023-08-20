@@ -13,6 +13,7 @@ const Calendar = () => {
           month={item.month}
           events={item.event} // Pass events as props to Day component
           isFirstDay={index === 0}
+          isLastDay={index === data.length - 1}
         />
       ))}
     </div>

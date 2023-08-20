@@ -2,7 +2,7 @@ import React from 'react';
 import Event from './Event';
 import './Day.css';
 
-const Day = ({ date, day, month, events, isFirstDay }) => {
+const Day = ({ date, day, month, events, isFirstDay, isLastDay }) => {
   return (
     <div className='day-parent'>
       {/* vertical line */}
@@ -22,6 +22,9 @@ const Day = ({ date, day, month, events, isFirstDay }) => {
       <div className='event'>
         <Event events={events} isFirstEventOfDay={isFirstDay} /> {/* Pass the events as props to Event component */}
       </div>
+
+      {/* Horizontal Line conditionally */}
+      {isLastDay === false && <hr className="horizontal-line" />}
     </div>
   );
 };
