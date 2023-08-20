@@ -5,10 +5,12 @@ const Event = ({ events, isFirstEventOfDay }) => {
   return (
     <div className='event'>
       {events.map((event, index) => (
+        // Render time, taskIcon, taskName, userPhoto and userName
         <div className='event-item' key={index}>
           <div className='event-details'>
             <p className='event-time'>{event.time}</p>
             <img className='event-task-icon' src={event.taskIcon} alt='task' />
+            {/* // Apply custom css to first event of the day */}
             <p className={`event-task-name ${isFirstEventOfDay && index === 0 ? 'first-event' : ''}`}>{event.taskName}</p>
           </div>
 

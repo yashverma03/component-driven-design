@@ -5,26 +5,29 @@ import './Day.css';
 const Day = ({ date, day, month, events, isFirstDay, isLastDay }) => {
   return (
     <div className='day-parent'>
-      {/* vertical line */}
-      <div className="vertical-line" />
+      {/* Vertical line */}
+      <div className='vertical-line' />
 
-      <div className="day">
-        <div className="day-details">
-          <p className="day-day">{day}</p>
-          <p className="day-month">{month}</p>
+      {/* Render day, month and date */}
+      <div className='day'>
+        <div className='day-details'>
+          <p className='day-day'>{day}</p>
+          <p className='day-month'>{month}</p>
         </div>
 
-        <div className="day-header">
+        <div className='day-header'>
+          {/* // Apply custom css to first day of the calendar */}
           <h2 className={`day-date ${isFirstDay ? 'first-day' : ''}`}>{date}</h2>
         </div>
       </div>
 
+      {/* Render the Event component, passing the events as props */}
       <div className='event'>
-        <Event events={events} isFirstEventOfDay={isFirstDay} /> {/* Pass the events as props to Event component */}
+        <Event events={events} isFirstEventOfDay={isFirstDay} />
       </div>
 
-      {/* Horizontal Line conditionally */}
-      {isLastDay === false && <hr className="horizontal-line" />}
+      {/* Horizontal line (conditionally) */}
+      {isLastDay === false && <hr className='horizontal-line' />}
     </div>
   );
 };
